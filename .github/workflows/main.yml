@@ -1,11 +1,9 @@
-name: CI Workflow
+name: CI Workflow with Branch
 
 on:
   push:
     branches:
-      - main
-
-jobs:
+      - '*'jobs:
   build:
     runs-on: ubuntu-latest
 
@@ -15,5 +13,6 @@ jobs:
 
     - name: Print Hello
       run: echo "Hello, CI Workflow!"
-    - name: Print Greeting
-      run: echo "Welcome to CI Workflow!"
+
+    - name: Determine Branch
+      run: echo "On branch ${{ github.ref }}"
