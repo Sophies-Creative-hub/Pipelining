@@ -17,3 +17,11 @@ jobs:
 
     - name: Determine Branch
       run: echo "On branch ${{ github.ref }}"
+    
+    - name: Print Branch Greeting
+      run: |
+        if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+          echo "Welcome to the Main Branch!"
+        else
+          echo "Welcome to a Feature Branch!"
+        fi
