@@ -1,5 +1,5 @@
 // Importiere die Funktionen, die getestet werden sollen
-import { submitName } from './greetingApp';
+import { submitName } from './frontend/greetingApp';
 
 // Beispieltests
 test('submitName Funktion', () => {
