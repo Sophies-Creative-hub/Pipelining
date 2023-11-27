@@ -1,0 +1,17 @@
+// Importiere die Funktionen, die getestet werden sollen
+import { submitName } from './greetingApp';
+
+// Beispieltests
+test('submitName Funktion', () => {
+  // Erstelle ein HTML-Element für den Test
+  document.body.innerHTML = `
+    <input type="text" id="nameInput" value="John">
+    <h2 id="greetingMessage"></h2>
+  `;
+
+  // Rufe die Funktion auf
+  submitName();
+
+  // Überprüfe, ob die Grußnachricht korrekt gesetzt wurde
+  expect(document.getElementById('greetingMessage').innerText).toBe('Hallo, John!');
+});
