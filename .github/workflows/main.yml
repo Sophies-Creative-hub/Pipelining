@@ -3,7 +3,8 @@ name: CI Workflow with Branch
 on:
   push:
     branches:
-      - '*'jobs:
+      - '*'
+jobs:
   build:
     runs-on: ubuntu-latest
 
