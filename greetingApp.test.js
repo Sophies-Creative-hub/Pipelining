@@ -1,4 +1,4 @@
-import { submitName } from './frontend/greeting';
+const { submitName } = require('./frontend/main');
 
 // Beispieltests
 test('submitName Funktion', () => {
@@ -12,5 +12,7 @@ test('submitName Funktion', () => {
   submitName();
 
   // Überprüfe, ob die Grußnachricht korrekt gesetzt wurde
-  expect(document.getElementById('greetingMessage').innerText).toBe('Hallo, John!');
+  expect(document.getElementById('greetingMessage').innerText).toBe('Hello, John!');
 });
+
+
