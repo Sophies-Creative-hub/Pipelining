@@ -1,4 +1,4 @@
-const { submitName } = require('./frontend/greetingApp');
+import { submitName } from './frontend/greeting';
 
 // Beispieltests
 test('submitName Funktion', () => {
